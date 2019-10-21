@@ -1,1 +1,1 @@
-https://in.com/in/dan-halperin/
+https://linkedin.com/in/dan-halperin/
