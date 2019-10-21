@@ -1,31 +1,31 @@
 import React from "react";
 import "./App.css";
-import Entry from "./entry";
+import Counter from "./Counter";
 import { StateProvider } from "./state";
 
 const App = () => {
   const initialState = {
-    verified: "home"
+    counter: 0
   };
   const reducer = (state, action) => {
     switch (action.type) {
-      case "changeApp":
+      case "increaseCounter":
         return {
           ...state,
-          verified: action.newApp
+          counter: state.counter + 1
         };
-
+      case "decreaseCounter":
+        return {
+          ...state,
+          counter: state.counter - 1
+        };
       default:
         return state;
     }
   };
   return (
     <StateProvider initialState={initialState} reducer={reducer}>
-      <div className="App">
-        <header className="App-header">
-          <Entry />
-        </header>
-      </div>
+      <Counter />
     </StateProvider>
   );
 };
