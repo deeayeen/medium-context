@@ -14,6 +14,16 @@ export default class Counter extends Component {
         <button onClick={() => dispatch({ type: "decreaseCounter" })}>
           Decrease Counter
         </button>
+        <button
+          onClick={() => dispatch({ type: "increaseCounter2", increment: 10 })}
+        >
+          Increase Counter 2
+        </button>
+        <button
+          onClick={() => dispatch({ type: "decreaseCounter2", increment: 5 })}
+        >
+          Decrease Counter 2
+        </button>
       </div>
     );
   }
